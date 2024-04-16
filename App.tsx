@@ -5,8 +5,11 @@ import {
   Text,
   TouchableOpacity,
   View,
-  NativeModules
+  NativeModules,
+  AppRegistry,
 } from 'react-native';
+
+import RNSampleComponent from './src/RNSampleComponent';
 
 const ToastService = NativeModules.ToastModule;
 const FragmentService = NativeModules.FragmentModule;
@@ -44,3 +47,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+AppRegistry.registerComponent('RNSampleComponent', () => RNSampleComponent)
